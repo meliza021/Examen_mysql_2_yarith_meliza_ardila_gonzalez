@@ -1,15 +1,15 @@
 DELIMITER $$
 
-CREATE EVENT IF NOT EXISTS ev_actualizar_emails_nulos
-ON SCHEDULE
-  EVERY 1 DAY
-  STARTS TIMESTAMP(CURRENT_DATE, '02:00:00')
+CREATE EVENT IF NOT EXISTS ActualizarSaldosPendientes
+ON SCHEDULE EVERY 1 MONTH
+STARTS '2025-07-31 23:59:00'
 DO
-  UPDATE tu_tabla
-  SET email = 'holasoymeliza@gmail.com'
-  WHERE email IS NULL OR email = '';
-$$
+BEGIN
+  UPDATE clientes
+  SET saldo_pendiente = saldo_pendiente + (saldo_pendiente * 0.02)
+  WHERE estado = 'activo';
+END$$
 
 DELIMITER ;
 
-DELIMITER $$
+
