@@ -5,7 +5,7 @@ USE Examen
 
 SHOW TABLES
 
-DROP TABLE IF EXISTS clientes;
+DROP TABLE IF EXISTS `clientes`;
 
 DROP TABLE IF EXISTS `departamento`;
 
@@ -14,6 +14,24 @@ DROP TABLE IF EXISTS `detalles_pedidos`;
 DROP TABLE IF EXISTS `empleados`;
 
 DROP TABLE IF EXISTS `empresa`;
+
+DROP TABLE IF EXISTS `municipio`;
+
+DROP TABLE IF EXISTS `pais`;
+
+DROP TABLE IF EXISTS `productos`;
+
+DROP TABLE IF EXISTS `producto_suc`;
+
+DROP TABLE IF EXISTS `pedidos`;
+
+DROP TABLE IF EXISTS `sucursal`;
+
+DROP TABLE IF EXISTS `producto_suc`;
+
+DROP TABLE IF EXISTS `sucursal`;
+
+DROP TABLE IF EXISTS `sucursal`;
 
 
 CREATE TABLE `clientes` (
@@ -66,8 +84,6 @@ CREATE TABLE `empresa` (
   UNIQUE KEY `empresa_unique` (`nombre`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
-DROP TABLE IF EXISTS `municipio`;
-
 CREATE TABLE `municipio` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `nombre` varchar(80) DEFAULT NULL,
@@ -76,39 +92,12 @@ CREATE TABLE `municipio` (
   KEY `municipio_departamento_FK` (`depid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
---
--- Dumping data for table `municipio`
---
-
-LOCK TABLES `municipio` WRITE;
-UNLOCK TABLES;
-
---
--- Table structure for table `pais`
---
-
-DROP TABLE IF EXISTS `pais`;
-
 CREATE TABLE `pais` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `nombre` varchar(80) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `pais_unique` (`nombre`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
--- Dumping data for table `pais`
-
-
-LOCK TABLES `pais` WRITE;
-
-
-UNLOCK TABLES;
-
-
--- Table structure for table `pedidos`
-
-
-DROP TABLE IF EXISTS `pedidos`;
 
 CREATE TABLE `pedidos` (
   `pedido_id` INT NOT NULL AUTO_INCREMENT,
@@ -122,19 +111,6 @@ CREATE TABLE `pedidos` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 
-
--- Dumping data for table `pedidos`
-
-
-LOCK TABLES `pedidos` WRITE;
-UNLOCK TABLES;
-
-
-
-
-
-DROP TABLE IF EXISTS `productos`;
-
 CREATE TABLE `productos` (
   `producto_id` INT NOT NULL AUTO_INCREMENT,
   `nombre` varchar(80) DEFAULT NULL,
@@ -145,18 +121,6 @@ CREATE TABLE `productos` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 
--- Dumping data for table `productos`
-
-
-LOCK TABLES `productos` WRITE;
-
-UNLOCK TABLES;
-
-
--- Table structure for table `producto_suc`
-
-
-DROP TABLE IF EXISTS `producto_suc`;
 
 CREATE TABLE `producto_suc` (
   `productoid` INT NOT NULL,
@@ -165,20 +129,6 @@ CREATE TABLE `producto_suc` (
   KEY `producto_suc_sucursal_FK` (`sucursalid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
-
-
--- Dumping data for table `producto_suc`
-
-
-LOCK TABLES `producto_suc` WRITE;
-
-UNLOCK TABLES;
-
-
--- Table structure for table `sucursal`
-
-
-DROP TABLE IF EXISTS `sucursal`;
 
 
 CREATE TABLE `sucursal` (
@@ -191,11 +141,3 @@ CREATE TABLE `sucursal` (
   KEY `sucursal_empresa_FK` (`empresaid`),
   KEY `sucursal_municipio_FK` (`municipioid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Dumping data for table `sucursal`
---
-
-LOCK TABLES `sucursal` WRITE;
-
-UNLOCK TABLES;
