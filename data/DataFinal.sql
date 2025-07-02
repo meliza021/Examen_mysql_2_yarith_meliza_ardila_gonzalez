@@ -11,86 +11,85 @@ INSERT INTO pais (nombre) VALUES
 ('Paraguay');
 
 
-INSERT INTO departamento (nombre, paisid) VALUES
-(1, 'Antioquia', 1),
-(2, 'Cundinamarca', 1),
-(3, 'Valle del Cauca', 1),
-(4, 'Atlántico', 1),
-(5, 'Bolívar', 1),
-(6, 'Santander', 1),
-(7, 'Nariño', 1),
-(8, 'Caldas', 1),
-(9, 'Tolima', 1),
-(10, 'Boyacá', 1);
+INSERT INTO departamento (nombre, pais_id) VALUES
+('Antioquia', 1),
+('Cundinamarca', 1),
+('Valle del Cauca', 1),
+('Atlántico', 1),
+('Bolívar', 1),
+('Santander', 1),
+('Nariño', 1),
+('Caldas', 1),
+('Tolima', 1),
+( 'Boyacá', 1);
 
 
-INSERT INTO municipio (id, nombre, depid) VALUES
-(1, 'Medellín', 1),
-(2, 'Bello', 1),
-(3, 'Itagüí', 1),
-(4, 'Envigado', 1),
-(5, 'Rionegro', 1),
-(6, 'Soacha', 2),
-(7, 'Chía', 2),
-(8, 'Zipaquirá', 2),
-(9, 'Facatativá', 2),
-(10, 'Girardot', 2),
-(11, 'Cali', 3),
-(12, 'Palmira', 3),
-(13, 'Buenaventura', 3),
-(14, 'Tuluá', 3),
-(15, 'Cartago', 3),
-(16, 'Barranquilla', 4),
-(17, 'Soledad', 4),
-(18, 'Malambo', 4),
-(19, 'Puerto Colombia', 4),
-(20, 'Sabanalarga', 4),
-(21, 'Cartagena', 5),
-(22, 'Magangué', 5),
-(23, 'Turbaco', 5),
-(24, 'El Carmen de Bolívar', 5),
-(25, 'Arjona', 5),
-(26, 'Bucaramanga', 6),
-(27, 'Floridablanca', 6),
-(28, 'Giron', 6),
-(29, 'Piedecuesta', 6),
-(30, 'Barrancabermeja', 6),
-(31, 'Pasto', 7),
-(32, 'Tumaco', 7),
-(33, 'Ipiales', 7),
-(34, 'Túquerres', 7),
-(35, 'Samaniego', 7),
-(36, 'Manizales', 8),
-(37, 'Villamaría', 8),
-(38, 'Chinchiná', 8),
-(39, 'La Dorada', 8),
-(40, 'Riosucio', 8),
-(41, 'Ibagué', 9),
-(42, 'Espinal', 9),
-(43, 'Melgar', 9),
-(44, 'Honda', 9),
-(45, 'Líbano', 9),
-(46, 'Tunja', 10),
-(47, 'Duitama', 10),
-(48, 'Sogamoso', 10),
-(49, 'Chiquinquirá', 10),
-(50, 'Moniquirá', 10);
+INSERT INTO municipio (nombre, depid) VALUES
+('Medellín', 1),
+('Bello', 1),
+('Itagüí', 1),
+('Envigado', 1),
+('Rionegro', 1),
+('Soacha', 2),
+('Chía', 2),
+('Zipaquirá', 2),
+('Facatativá', 2),
+('Girardot', 2),
+('Cali', 3),
+('Palmira', 3),
+('Buenaventura', 3),
+('Tuluá', 3),
+('Cartago', 3),
+('Barranquilla', 4),
+('Soledad', 4),
+('Malambo', 4),
+('Puerto Colombia', 4),
+('Sabanalarga', 4),
+('Cartagena', 5),
+( 'Magaurbaco', 5),
+( 'El Carmen de Bolívar', 5),
+( 'Arjona', 5),
+( 'Bucaramanga', 6),
+( 'Floridablanca', 6),
+( 'Giron', 6),
+( 'Piedecuesta', 6),
+( 'Barrancabermeja', 6),
+( 'Pasto', 7),
+( 'Tumaco', 7),
+( 'Ipiales', 7),
+( 'Túquerres', 7),
+( 'Samaniego', 7),
+( 'Manizales', 8),
+( 'Villamaría', 8),
+( 'Chinchiná', 8),
+( 'La Dorada', 8),
+( 'Riosucio', 8),
+( 'Ibagué', 9),
+( 'Espinal', 9),
+( 'Melgar', 9),
+( 'Honda', 9),
+( 'Líbano', 9),
+( 'Tunja', 10),
+( 'Duitama', 10),
+( 'Sogamoso', 10),
+( 'Chiquinquirá', 10),
+( 'Moniquirá', 10);
 
 INSERT INTO empresa (id, nombre) VALUES
 ('EMP100', 'RedElectro S.A.');
 
 
-INSERT INTO sucursal (id, nombre, direccion, empresaid, municipioid) VALUES
-(1, 'Sucursal Zona 1', 'Calle 10 #45-5', 'EMP100', 41),
-(2, 'Sucursal Zona 2', 'Calle 11 #45-6', 'EMP100', 8),
-(3, 'Sucursal Zona 3', 'Calle 12 #45-7', 'EMP100', 2),
-(4, 'Sucursal Zona 4', 'Calle 13 #45-8', 'EMP100', 18),
-(5, 'Sucursal Zona 5', 'Calle 14 #45-9', 'EMP100', 16),
-(6, 'Sucursal Zona 6', 'Calle 15 #45-10', 'EMP100', 15),
-(7, 'Sucursal Zona 7', 'Calle 16 #45-11', 'EMP100', 9),
-(8, 'Sucursal Zona 8', 'Calle 17 #45-12', 'EMP100', 7),
-(9, 'Sucursal Zona 9', 'Calle 18 #45-13', 'EMP100', 35),
-(10, 'Sucursal Zona 10', 'Calle 19 #45-14', 'EMP100', 6);
+INSERT INTO sucursal (nombre, direccion, empresaid, municipioid) VALUES
+('Sucursal Zona 1', 'Calle 10 #45-5', 'EMP100', 41),
+('Sucursal Zona 2', 'Calle 11 #45-6', 'EMP100', 8),
+('Sucursal Zona 3', 'Calle 12 #45-7', 'EMP100', 2),
+('Sucursal Zona 4', 'Calle 13 #45-8', 'EMP100', 18),
+('Sucursal Zona 5', 'Calle 14 #45-9', 'EMP100', 16),
+('Sucursal Zona 6', 'Calle 15 #45-10', 'EMP100', 15),
+('Sucursal Zona 7', 'Calle 16 #45-11', 'EMP100', 9),
+('Sucursal Zona 8', 'Calle 17 #45-12', 'EMP100', 7),
+('Sucursal Zona 9', 'Calle 18 #45-13', 'EMP100', 35),
+('Sucursal Zona 10', 'Calle 19 #45-14', 'EMP100', 6);
 
 INSERT INTO empleados (nombre, puesto, fecha_contratacion, salario, sucursalid) VALUES
 ('Laura Rodríguez', 'Cajero', '2021-04-26', 2040075.24, 1),
@@ -195,7 +194,7 @@ INSERT INTO empleados (nombre, puesto, fecha_contratacion, salario, sucursalid) 
 ('Sofía Gómez', 'Supervisor', '2022-08-26', 2075750.67, 10);
 
 
-INSERT INTO clientes (nombre, email, telefono, direccion, fecha_registro, municipioid) VALUES
+INSERT INTO clientes (nombre, email, telefono, direccion, fecha_registro, municipio_id) VALUES
 ('Valentina Mendoza', 'valentina.mendoza@mail.com', '3139749508', 'Calle 9 #74-19', '2022-11-11', 1),
 ('Andrés Mendoza', 'andrés.mendoza@mail.com', '3207064620', 'Calle 34 #68-1', '2021-10-23', 1),
 ('Daniela López', 'daniela.lópez@mail.com', '3180346223', 'Calle 31 #43-11', '2023-03-26', 1),
@@ -1061,7 +1060,7 @@ INSERT INTO pedidos (cliente_id, empleado_id, fecha_pedido, estado) VALUES (100,
 INSERT INTO pedidos (cliente_id, empleado_id, fecha_pedido, estado) VALUES (100, 44, '2023-10-03', 'Enviado');
 INSERT INTO pedidos (cliente_id, empleado_id, fecha_pedido, estado) VALUES (100, 14, '2023-05-11', 'Cancelado');
 
-INSERT INTO productosuc (productoid, sucursalid) VALUES
+INSERT INTO producto_suc (productoid, sucursalid) VALUES
 (11, 1),
 (42, 1),
 (45, 1),
