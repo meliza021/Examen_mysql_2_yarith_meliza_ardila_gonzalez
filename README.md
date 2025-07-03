@@ -1,3 +1,9 @@
+
+# link de mi repo de notas  
+
+https://github.com/meliza021/Notas_mysql.git
+
+
 # Examen MySQL II
 
 En este Examen se te proporcionará el script SQL correspondiente a la estructura y datos de una base de datos transaccional. Tu tarea consistirá en validar su integridad, cargar correctamente los datos y desarrollar soluciones funcionales a partir de la información contenida. Sigue cuidadosamente los pasos a continuación y asegúrate de documentar cada parte mediante commits bien estructurados y haciendo uso de `Conventional Commit` en tu repositorio.
